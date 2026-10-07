@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تشفير الملفات والمجلدات والأقراص (File, Folder and Disc Encryption)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <script>
+    try {
+      if (localStorage.getItem("encryption-explain-theme") !== "light")
+        document.documentElement.classList.add("dark");
+    } catch (err) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">تخطي إلى المحتوى</a>
+  <header class="top">
+    <a class="brand" href="index.html">تقنيات التشفير والحماية</a>
+    <div class="top-actions">
+      <a class="btn solid" href="summary.html">جدول الخلاصة</a>
+      <button class="btn" type="button" id="theme">الوضع</button>
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    <p class="kicker">تقنية 3 من 15</p>
+    <h1>تشفير الملفات والمجلدات والأقراص <span class="en">(File, Folder and Disc Encryption)</span></h1>
+    <section class="blocks">
+      <article class="block">
+        <h2>متى نعملها</h2>
+        <p>نعملها لحماية البيانات المخزّنة إذا سُرق الجهاز أو فُقد.</p>
+      </article>
+      <article class="block">
+        <h2>وظيفتها</h2>
+        <p>وظيفتها جعل الملفات أو المجلد أو القرص غير قابل للقراءة إلا بكلمة المرور أو مفتاح فك التشفير الصحيح.</p>
+      </article>
+      <article class="block">
+        <h2>كيف نعملها عملياً</h2>
+        <p>لتشفير القرص كاملاً نشغّل برنامج بيت لوكر <span class="en">(BitLocker)</span>. للملفات أو مجلد محدد إما نضعهم على هذا القرص المشفّر، أو نختار تشفير المحتوى من خصائص المجلد في ويندوز <span class="en">(Windows)</span>.</p>
+        <div class="program"><strong>البرنامج الذي نستخدمه</strong>برنامج بيت لوكر <span class="en">(BitLocker)</span> من إعدادات ويندوز <span class="en">(Windows)</span>، عبر تشفير الجهاز <span class="en">(Device encryption)</span>.</div>
+        <ol class="steps">
+          <li>نفتح إعدادات ويندوز <span class="en">(Windows)</span>.</li>
+          <li>نبحث عن تشفير الجهاز <span class="en">(Device encryption)</span> أو برنامج بيت لوكر <span class="en">(BitLocker)</span>.</li>
+          <li>نشغّل التشفير على القرص.</li>
+          <li>نحفظ كلمة المرور أو مفتاح الاسترداد في مكان آمن.</li>
+        </ol>
+        <figure class="shot">
+          <img src="img/settings/disk.png" alt="صفحة تشفير محرك الأقراص ببرنامج بيت لوكر في لوحة التحكم">
+          <figcaption>لوحة التحكم، تشفير محرك الأقراص ببرنامج بيت لوكر <span class="en">(BitLocker)</span>. خيار التشغيل اسمه <span class="en">Turn BitLocker on</span>.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="img/settings/folder.png" alt="مربع تشفير محتوى المجلد من الخصائص المتقدمة">
+          <figcaption>لمجلد محدد: خصائص المجلد، ثم متقدم <span class="en">(Advanced)</span>، ثم تشفير المحتوى <span class="en">(Encrypt contents to secure data)</span>.</figcaption>
+        </figure>
+      </article>
+    </section>
+    <nav class="pager" aria-label="التنقل بين التقنيات">
+      <a class="btn" href="drm.html">السابق: إدارة الحقوق الرقمية</a>
+      <a class="btn" href="index.html">كل التقنيات</a>
+      <a class="btn solid" href="device.html">التالي: التشفير المدمج</a>
+    </nav>
+
+  </main>
+  <script src="js/theme.js"></script>
+</body>
+</html>

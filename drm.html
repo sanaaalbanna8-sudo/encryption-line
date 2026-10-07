@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إدارة الحقوق الرقمية (Digital Rights Management - DRM)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <script>
+    try {
+      if (localStorage.getItem("encryption-explain-theme") !== "light")
+        document.documentElement.classList.add("dark");
+    } catch (err) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">تخطي إلى المحتوى</a>
+  <header class="top">
+    <a class="brand" href="index.html">تقنيات التشفير والحماية</a>
+    <div class="top-actions">
+      <a class="btn solid" href="summary.html">جدول الخلاصة</a>
+      <button class="btn" type="button" id="theme">الوضع</button>
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    <p class="kicker">تقنية 2 من 15</p>
+    <h1>إدارة الحقوق الرقمية <span class="en">(Digital Rights Management - DRM)</span></h1>
+    <section class="blocks">
+      <article class="block">
+        <h2>متى نعملها</h2>
+        <p>نعملها عندما نوزّع فيلماً أو كتاباً أو برنامجاً، ونريد منع نسخه وتوزيعه بشكل غير قانوني.</p>
+      </article>
+      <article class="block">
+        <h2>وظيفتها</h2>
+        <p>وظيفتها حماية حقوق الملكية الفكرية. الملف يُشفَّر ويُربَط بخادم التراخيص <span class="en">(License Server)</span>.</p>
+        <p>خادم التراخيص <span class="en">(License Server)</span> يعطي مفتاح فك التشفير عبر الإنترنت بعد التحقق من أن المستخدم يملك التصريح.</p>
+      </article>
+      <article class="block">
+        <h2>كيف نعملها عملياً</h2>
+        <p>نضع المحتوى مشفّراً. البرنامج الذي يفتحه يطلب المفتاح من خادم التراخيص <span class="en">(License Server)</span>. من دون هذا المفتاح لا يُفتح الملف.</p>
+        <div class="program"><strong>البرنامج الذي نستخدمه</strong>مشغّل المحتوى مع خادم التراخيص <span class="en">(License Server)</span>، كما في تطبيقات الأفلام والكتب الرقمية وتفعيل البرامج.</div>
+        <ol class="steps">
+          <li>نشفّر ملف الفيلم أو الكتاب أو البرنامج.</li>
+          <li>نربطه بخادم التراخيص <span class="en">(License Server)</span>.</li>
+          <li>عند الفتح يتحقق الخادم من التصريح.</li>
+          <li>إذا كان التصريح صحيحاً يُرسَل مفتاح فك التشفير عبر الإنترنت.</li>
+        </ol>
+      </article>
+    </section>
+    <nav class="pager" aria-label="التنقل بين التقنيات">
+      <a class="btn" href="password.html">السابق: التخزين الآمن لكلمات المرور</a>
+      <a class="btn" href="index.html">كل التقنيات</a>
+      <a class="btn solid" href="disk.html">التالي: تشفير الملفات والمجلدات والأقراص</a>
+    </nav>
+
+  </main>
+  <script src="js/theme.js"></script>
+</body>
+</html>

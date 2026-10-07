@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المفتاح العام والمفتاح الخاص (Public Key and Private Key)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <script>
+    try {
+      if (localStorage.getItem("encryption-explain-theme") !== "light")
+        document.documentElement.classList.add("dark");
+    } catch (err) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">تخطي إلى المحتوى</a>
+  <header class="top">
+    <a class="brand" href="index.html">تقنيات التشفير والحماية</a>
+    <div class="top-actions">
+      <a class="btn solid" href="summary.html">جدول الخلاصة</a>
+      <button class="btn" type="button" id="theme">الوضع</button>
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    <p class="kicker">تقنية 9 من 15</p>
+    <h1>المفتاح العام والمفتاح الخاص <span class="en">(Public Key and Private Key)</span></h1>
+    <section class="blocks">
+      <article class="block">
+        <h2>متى نعملها</h2>
+        <p>نستخدمهما عندما نريد أن يقرأ الرسالة المستلم المقصود فقط.</p>
+      </article>
+      <article class="block">
+        <h2>وظيفتها</h2>
+        <p>وظيفتهما التشفير غير المتماثل <span class="en">(Asymmetric Encryption)</span>. الزوج مرتبط رياضياً. المفتاح العام <span class="en">(Public Key)</span> يُوزَّع ويُستخدم للتشفير. المفتاح الخاص <span class="en">(Private Key)</span> يبقى سراً عند المستلم، وبه فقط يُفك التشفير.</p>
+      </article>
+      <article class="block">
+        <h2>كيف نعملها عملياً</h2>
+        <p>نولّد الزوج من أداة الشهادات. ننشر المفتاح العام <span class="en">(Public Key)</span> ونبقي المفتاح الخاص <span class="en">(Private Key)</span> على الجهاز. المُرسِل يشفّر بالمفتاح العام <span class="en">(Public Key)</span>، والمستلم يفك بالمفتاح الخاص <span class="en">(Private Key)</span>.</p>
+        <div class="program"><strong>البرنامج الذي نستخدمه</strong>مدير الشهادات في ويندوز <span class="en">(Windows Certificate Manager)</span>، أو أداة إنشاء الشهادة عند تجهيز الموقع أو البريد المشفّر.</div>
+        <ol class="steps">
+          <li>نولّد زوج المفاتيح من مدير الشهادات أو عند طلب الشهادة.</li>
+          <li>نوزّع المفتاح العام <span class="en">(Public Key)</span>.</li>
+          <li>نبقي المفتاح الخاص <span class="en">(Private Key)</span> على الجهاز ولا نرسله.</li>
+          <li>التشفير يتم بالمفتاح العام <span class="en">(Public Key)</span>، والفك بالمفتاح الخاص <span class="en">(Private Key)</span>.</li>
+        </ol>
+        <figure class="shot">
+          <img src="img/settings/certs.png" alt="مدير الشهادات حيث تُحفظ الشهادات التي تحمل المفتاح العام">
+          <figcaption>الشهادات التي تحمل المفتاح العام <span class="en">(Public Key)</span> نراها من مدير الشهادات <span class="en">(Certificate Manager)</span>. المفتاح الخاص <span class="en">(Private Key)</span> يبقى على الجهاز ولا يُنسخ من هذه الشاشة.</figcaption>
+        </figure>
+      </article>
+    </section>
+    <nav class="pager" aria-label="التنقل بين التقنيات">
+      <a class="btn" href="https.html">السابق: بروتوكول نقل النص التشعبي الآمن</a>
+      <a class="btn" href="index.html">كل التقنيات</a>
+      <a class="btn solid" href="mac.html">التالي: تصفية عنوان التحكم بالوصول للوسائط</a>
+    </nav>
+
+  </main>
+  <script src="js/theme.js"></script>
+</body>
+</html>

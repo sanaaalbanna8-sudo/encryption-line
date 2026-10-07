@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الشهادات الرقمية وهيئات التصديق (Digital Certificates and Certificate Authorities - CAs)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <script>
+    try {
+      if (localStorage.getItem("encryption-explain-theme") !== "light")
+        document.documentElement.classList.add("dark");
+    } catch (err) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">تخطي إلى المحتوى</a>
+  <header class="top">
+    <a class="brand" href="index.html">تقنيات التشفير والحماية</a>
+    <div class="top-actions">
+      <a class="btn solid" href="summary.html">جدول الخلاصة</a>
+      <button class="btn" type="button" id="theme">الوضع</button>
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    <p class="kicker">تقنية 7 من 15</p>
+    <h1>الشهادات الرقمية وهيئات التصديق <span class="en">(Digital Certificates and Certificate Authorities - CAs)</span></h1>
+    <section class="blocks">
+      <article class="block">
+        <h2>متى نعملها</h2>
+        <p>نعملها عندما نريد التحقق من هوية موقع أو شخص، وبناء الثقة في الاتصال عبر الإنترنت.</p>
+      </article>
+      <article class="block">
+        <h2>وظيفتها</h2>
+        <p>وظيفتها أن تصدر هيئة التصديق <span class="en">(Certificate Authority - CA)</span> شهادة رقمية <span class="en">(Digital Certificate)</span> موثوقة. الشهادة تحمل المفتاح العام <span class="en">(Public Key)</span> للموقع وتأكيداً لهويته، والمتصفح يفحص هذه الشهادة.</p>
+      </article>
+      <article class="block">
+        <h2>كيف نعملها عملياً</h2>
+        <p>نطلب الشهادة الرقمية <span class="en">(Digital Certificate)</span> من هيئة التصديق <span class="en">(Certificate Authority - CA)</span>، ثم نركّبها على خادم الموقع. الزائرة تفتح القفل في المتصفح وترى الهوية.</p>
+        <div class="program"><strong>البرنامج الذي نستخدمه</strong>حساب هيئة التصديق <span class="en">(Certificate Authority - CA)</span> لطلب الشهادة، ولوحة استضافة الموقع لتركيبها. الفحص من القفل في المتصفح.</div>
+        <ol class="steps">
+          <li>نطلب الشهادة الرقمية <span class="en">(Digital Certificate)</span> من هيئة التصديق <span class="en">(Certificate Authority - CA)</span>.</li>
+          <li>نركّبها على خادم الموقع من لوحة الاستضافة.</li>
+          <li>نفتح القفل في المتصفح ونتأكد من اسم الموقع والمفتاح العام <span class="en">(Public Key)</span>.</li>
+        </ol>
+        <figure class="shot">
+          <img src="img/settings/certs.png" alt="مدير الشهادات في ويندوز ومجلد هيئات التصديق الجذرية">
+          <figcaption>مدير الشهادات <span class="en">(Certificate Manager)</span>. هيئات التصديق الجذرية الموثوقة اسمها <span class="en">(Trusted Root Certification Authorities)</span>.</figcaption>
+        </figure>
+      </article>
+    </section>
+    <nav class="pager" aria-label="التنقل بين التقنيات">
+      <a class="btn" href="vpn.html">السابق: الشبكة الخاصة الافتراضية</a>
+      <a class="btn" href="index.html">كل التقنيات</a>
+      <a class="btn solid" href="https.html">التالي: بروتوكول نقل النص التشعبي الآمن</a>
+    </nav>
+
+  </main>
+  <script src="js/theme.js"></script>
+</body>
+</html>
